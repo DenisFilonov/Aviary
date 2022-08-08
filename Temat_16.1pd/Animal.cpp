@@ -9,6 +9,7 @@ Animal::Animal()
 
 Animal::Animal(string name, bool ispredator)
 {
+    if (name.size() == 0) throw new NameException();
     this->name = name;
     this->ispredator = ispredator;
 }
@@ -20,6 +21,7 @@ Animal::~Animal()
 
 void Animal::setName(string name)
 {
+    if (name.size() == 0) throw new NameException();
     this->name = name;
 }
 

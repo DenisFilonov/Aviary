@@ -36,3 +36,12 @@ public:
 		cout << "\nWarning! The capacity of aviary is overload!\n\n";
 	}
 };
+
+class NameException : public AviaryException
+{
+public:
+	virtual void showMessage()override
+	{
+		cout << "\nWarning! Name wasn't set!\n\n";
+	}
+};

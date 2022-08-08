@@ -23,7 +23,42 @@ void main()
 	Aviary c(5);*/
 
 
+	Beast un("Rabbit", false, "Forest", true);
+	Beast nu("Fox", true, "Forest", true);
+	Aviary tmp(4); // 0 1 2 3
+
 	try
+	{
+		Beast babaika("", true, "Abc", false);
+	}
+	catch (AviaryException* obj)
+	{
+		obj->showMessage();
+	}
+
+
+	try
+	{
+		tmp.addAnimal(&un);
+	}
+	catch (AviaryException* obj)
+	{
+		obj->showMessage();
+	}
+
+	try
+	{
+		tmp.addAnimal(&nu);
+	}
+	catch (AviaryException* obj)
+	{
+		obj->showMessage();
+	}
+
+
+	tmp.showAviary();
+
+	/*try
 	{
 		a.addAnimal(&d);
 	}
@@ -56,7 +91,7 @@ void main()
 		obj->showMessage();
 	}
 
-	a.showAviary();
+	a.showAviary();*/
 
 
 	/*        
